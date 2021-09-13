@@ -1,10 +1,4 @@
 class Solution:
-    def isPalindrome(self, string):
-        for i in range(len(string)):
-            if(string[i] != string[-(i+1)]):
-                return False
-        return True
-    
     def expandWindow(self, s, L, R):
         while L>=0 and R<len(s) and s[L] == s[R]:
             L = L-1
@@ -12,19 +6,6 @@ class Solution:
         return R-L-1
     
     def longestPalindrome(self, s: str) -> str:
-        '''index_arr = []
-        longest = ''
-        window = 1
-        flag = True
-        while window < len(s):
-            if flag:
-                for i in range(0,len(s)-window+1):
-                     if self.isPalindrome(s[i:(i+window)]):
-                            longest = s[i:i+window]
-                            index_arr.append([i:i+window])
-            else :
-                
-            window = window + 1'''
         if len(s) < 1 :
             return '';
         start = 0
